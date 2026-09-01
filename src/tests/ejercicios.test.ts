@@ -13,7 +13,7 @@
  */
 
 import { describe, it, expect } from "vitest";
-import { alumnos, type Alumno } from "../models/db.js";
+import { alumnos, type Alumno } from "../../model/db.js";
 import * as ej from "../parte 1/ejercicios.js";
 
 // -----------------------------------------------------------------------------
