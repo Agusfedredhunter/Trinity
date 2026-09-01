@@ -1,3 +1,17 @@
+# Trinity
+Trabajo Practico 1 de Programacion 4
+-------------
+Reglas del Grupo. 
+- Todo se escribe en el Main, nada de ramas extra.
+- Ser precisos con lo que se subio al git en el nuevo commit, incluir un nombre de los cambios y una pequeña descripción de lo hecho.
+Por ejemplo:
+
+Commit dia 30-08-2026
+Nombre: Ejercicio 1
+Descripcion: Avance en el trabajo practico, actividad 1 en progreso (estado= 59%)
+
+-----------
+
 # Práctica 1 - TypeScript
 
 Tres partes, mismo repo:
