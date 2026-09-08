@@ -27,8 +27,9 @@ import { alumnos, type Alumno } from "../../model/db.js";
 // obtenerNombres(alumnos)
 // -> ["Juan", "María", "Pedro", ...]
 export function obtenerNombres(alumnos: Alumno[]): string[] {
-    // TODO
-    throw new Error("Implementar");
+    let nombres: string[] = alumnos.map((alumno) => alumno.nombre);
+    console.log("Nombres de los alumnos:", nombres);
+    return nombres;
 }
 
 // -----------------------------------------------------------------------------
@@ -39,8 +40,9 @@ export function obtenerNombres(alumnos: Alumno[]): string[] {
 // Ejemplo:
 // ["Juan Pérez", "María García", ...]
 export function obtenerNombresCompletos(alumnos: Alumno[]): string[] {
-    // TODO
-    throw new Error("Implementar");
+    let nombresCompletos: string[] = alumnos.map((alumno) => `${alumno.nombre} ${alumno.apellido}`);
+    console.log("Nombres completos de los alumnos:", nombresCompletos);
+    return nombresCompletos;
 }
 
 // -----------------------------------------------------------------------------
@@ -49,6 +51,8 @@ export function obtenerNombresCompletos(alumnos: Alumno[]): string[] {
 // Devolver solamente los alumnos que tengan 18 años o más.
 export function obtenerMayoresDeEdad(alumnos: Alumno[]): Alumno[] {
     return alumnos.filter((alumno) => alumno.edad >= 18);
+    console.log("Alumnos mayores de edad:", numeroMayor);
+    return numeroMayor;
 }
 
 // -----------------------------------------------------------------------------
@@ -58,6 +62,8 @@ export function obtenerMayoresDeEdad(alumnos: Alumno[]): Alumno[] {
 // Devolver los alumnos aprobados.
 export function obtenerAprobados(alumnos: Alumno[]): Alumno[] {
     return alumnos.filter((alumno) => alumno.nota >= 6);
+    console.log("Alumnos aprobados:", aprobados);
+    return aprobados;
 }
 
 // -----------------------------------------------------------------------------
@@ -81,8 +87,14 @@ export function calcularPromedio(alumnos: Alumno[]): number {
 // Devolver el alumno que tenga la nota más alta.
 // Si el arreglo está vacío, devolver undefined.
 export function obtenerMejorAlumno(alumnos: Alumno[]): Alumno | undefined {
-    // TODO
-    throw new Error("Implementar");
+    if (alumnos.length === 0) {
+        return undefined;
+    }
+    let mejorAlumno = alumnos.reduce((mejor, alumno) => {
+        return alumno.nota > mejor.nota ? alumno : mejor;
+    }, alumnos[0]!);
+    console.log("Mejor alumno:", mejorAlumno);
+    return mejorAlumno;
 }
 
 // -----------------------------------------------------------------------------
