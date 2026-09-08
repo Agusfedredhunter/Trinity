@@ -107,8 +107,12 @@ export function buscarPorNombre(
     alumnos: Alumno[],
     nombre: string
 ): Alumno | undefined {
-    // TODO
-    throw new Error("Implementar");
+    if (alumnos.length === 0) 
+        return undefined;
+
+    return alumnos.reduce((mejor, actual) => {
+        return actual.nota > mejor.nota ? actual : mejor;
+    });    
 }
 
 // -----------------------------------------------------------------------------
