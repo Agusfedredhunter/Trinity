@@ -51,13 +51,11 @@ export class Alumno {
     // -------------------------------------------------------------------
 
     getNombreCompleto(): string {
-        // TODO
-        throw new Error("Implementar");
+        return `${this.nombre} ${this.apellido}`;
     }
 
     esMayorDeEdad(): boolean {
-        // TODO
-        throw new Error("Implementar");
+        return this.edad >= 18;
     }
 
     // -------------------------------------------------------------------
@@ -65,15 +63,20 @@ export class Alumno {
     // -------------------------------------------------------------------
 
     getEdad(): number {
-        // TODO
-        throw new Error("Implementar");
+        return this.edad;
     }
 
     setEdad(edad: number): void {
         // TODO: debe impedir edades inválidas.
         // edad < 0   -> throw new Error(...)
         // edad > 120 -> throw new Error(...)
-        throw new Error("Implementar");
+        if (edad < 0) {
+            throw new Error("La edad no puede ser negativa");
+        }
+        if (edad > 120) {
+            throw new Error("La edad no puede ser mayor a 120");
+        }
+        this.edad = edad;
     }
 
     // -------------------------------------------------------------------
