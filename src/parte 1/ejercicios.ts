@@ -51,8 +51,6 @@ export function obtenerNombresCompletos(alumnos: Alumno[]): string[] {
 // Devolver solamente los alumnos que tengan 18 años o más.
 export function obtenerMayoresDeEdad(alumnos: Alumno[]): Alumno[] {
     return alumnos.filter((alumno) => alumno.edad >= 18);
-    console.log("Alumnos mayores de edad:", numeroMayor);
-    return numeroMayor;
 }
 
 // -----------------------------------------------------------------------------
@@ -62,8 +60,6 @@ export function obtenerMayoresDeEdad(alumnos: Alumno[]): Alumno[] {
 // Devolver los alumnos aprobados.
 export function obtenerAprobados(alumnos: Alumno[]): Alumno[] {
     return alumnos.filter((alumno) => alumno.nota >= 6);
-    console.log("Alumnos aprobados:", aprobados);
-    return aprobados;
 }
 
 // -----------------------------------------------------------------------------
@@ -87,16 +83,9 @@ export function calcularPromedio(alumnos: Alumno[]): number {
 // Devolver el alumno que tenga la nota más alta.
 // Si el arreglo está vacío, devolver undefined.
 export function obtenerMejorAlumno(alumnos: Alumno[]): Alumno | undefined {
-    if (alumnos.length === 0) {
-        return undefined;
-    }
-    let mejorAlumno = alumnos.reduce((mejor, alumno) => {
-        return alumno.nota > mejor.nota ? alumno : mejor;
-    }, alumnos[0]!);
-    console.log("Mejor alumno:", mejorAlumno);
-    return mejorAlumno;
+    // TODO
+    throw new Error("Implementar");
 }
-
 // -----------------------------------------------------------------------------
 // EJERCICIO 7 - Buscar por legajo
 // -----------------------------------------------------------------------------
