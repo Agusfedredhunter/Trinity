@@ -39,7 +39,11 @@ export class Alumno {
         email: string
     ) {
         // TODO (Ejercicio 8): asignar los atributos recibidos.
-        throw new Error("Implementar");
+        this.legajo = legajo;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.email = email;
+        this.setEdad(edad);
     }
 
     // -------------------------------------------------------------------
