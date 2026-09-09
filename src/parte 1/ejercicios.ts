@@ -83,20 +83,20 @@ export function calcularPromedio(alumnos: Alumno[]): number {
 // Devolver el alumno que tenga la nota más alta.
 // Si el arreglo está vacío, devolver undefined.
 export function obtenerMejorAlumno(alumnos: Alumno[]): Alumno | undefined {
-    // TODO
-    throw new Error("Implementar");
+    if (alumnos.length === 0) {
+        return undefined;
+    }
+    return alumnos.reduce((mejor, actual) => {
+        return actual.nota > mejor.nota ? actual : mejor;
+    });
 }
 // -----------------------------------------------------------------------------
 // EJERCICIO 7 - Buscar por legajo
 // -----------------------------------------------------------------------------
 // Buscar un alumno por su número de legajo.
 // Si no existe, devolver undefined.
-export function buscarPorLegajo(
-    alumnos: Alumno[],
-    legajo: number
-): Alumno | undefined {
-    // TODO
-    throw new Error("Implementar");
+export function buscarPorLegajo(alumnos: Alumno[], legajo: number): Alumno | undefined {
+    return alumnos.find((alumno) => alumno.legajo === legajo);
 }
 
 // -----------------------------------------------------------------------------
