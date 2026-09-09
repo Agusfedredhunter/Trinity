@@ -108,14 +108,8 @@ export function buscarPorNombre(
     alumnos: Alumno[],
     nombre: string
 ): Alumno | undefined {
-    if (alumnos.length === 0) 
-        return undefined;
-
-    return alumnos.reduce((mejor, actual) => {
-        return actual.nota > mejor.nota ? actual : mejor;
-    });    
+    return alumnos.find((alumno) => alumno.nombre === nombre);
 }
-
 // -----------------------------------------------------------------------------
 // EJERCICIO 9 - ¿Existe algún alumno desaprobado?
 // -----------------------------------------------------------------------------
