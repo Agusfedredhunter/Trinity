@@ -95,7 +95,9 @@ export function obtenerMejorAlumno(alumnos: Alumno[]): Alumno | undefined {
 // -----------------------------------------------------------------------------
 // Buscar un alumno por su número de legajo.
 // Si no existe, devolver undefined.
-export function buscarPorLegajo(alumnos: Alumno[], legajo: number): Alumno | undefined {
+export function buscarPorLegajo(
+    alumnos: Alumno[], legajo: number
+): Alumno | undefined {
     return alumnos.find((alumno) => alumno.legajo === legajo);
 }
 
